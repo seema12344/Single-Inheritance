@@ -1,0 +1,54 @@
+//A C++ Program using Single Inheritance
+
+#include<iostream.h>
+#include<conio.h>
+
+class Person
+{
+   protected:
+	  int Personal_ID;
+	  char Name[10];
+};
+
+
+class Student:public Person
+{
+	  char cls[10];
+	   int Marks;
+   public:
+      void getStudData()
+      {
+	   cout<<"\nEnter Student Information;";
+	  cout<<"\nEnter Personal ID:";
+	  cin>>Personal_ID;
+	  cout<<"Enter Name:";
+	  cin>>Name;
+
+	 cout<<"Enter Class:";
+	 cin>> cls;
+	 cout<<"Enter Marks:";
+	  cin>> Marks;
+       }
+
+      void displayStudData()
+      {
+	 cout<<"\nStudent Information:";
+	 cout<<"\nPersonal ID = "<<Personal_ID;
+	 cout<<"\nName="<<Name;
+	 cout<<"\nClass:";
+	 cout<<cls;
+	 cout<<"\nMarks:";
+	 cout<<Marks;
+       }
+};
+
+void main()
+{
+  clrscr();
+  Student S;
+
+  S.getStudData();
+  S.displayStudData();
+
+  getch();
+}
